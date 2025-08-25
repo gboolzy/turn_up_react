@@ -1,0 +1,10 @@
+.app-backgroung-grad{
+      background: radial-gradient(1000px 600px at -10% -10%,
+       rgba(99, 102, 241, .2), transparent 40%), 
+       radial-gradient(800px 500px at 110% -20%,
+        rgba(34, 211, 238, .15), transparent 40%), #0f172a;
+}
+
+.card-background-grad{
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
