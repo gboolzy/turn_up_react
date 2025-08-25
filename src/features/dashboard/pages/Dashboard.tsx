@@ -3,7 +3,7 @@
 import Input from "../../../components/Input"
 import CardBg from "../components/card/CardBg";
 import DashboardCard from "../components/card/DashboardCard"
-import { BarChartMui, BarChartMui2, BarChartMui3 } from "../components/chart/mui/BarChartMui";
+import { BarChartMui, BarChartMui2 } from "../components/chart/mui/BarChartMui";
 import '../../../App.css'
 import Badge from "../components/Badge";
 import ActionButton from "../components/ActionButton";
