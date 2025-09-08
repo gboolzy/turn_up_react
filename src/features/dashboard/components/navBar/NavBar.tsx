@@ -21,19 +21,19 @@ const NavBar: FC<navBarProps> = ({ active, toggleActive }) => {
                         <i className="bx bx-home-alt-2"></i>
                         <span>Overview</span>
                     </a>
-                    <a className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer" >
+                    <a className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]" >
                         <i className="bx bx-bar-chart-alt-2"></i>
                         <span>Analytics</span>
                     </a>
-                    <a className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer">
+                    <a className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]">
                         <i className="bx bx-wallet"></i>
                         <span>Billing</span>
                     </a>
-                    <a className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer">
+                    <a className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]">
                         <i className="bx bx-cart"></i>
                         <span>Orders</span>
                     </a>
-                    <a className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer">
+                    <a className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]">
                         <i className="bx bx-cog"></i>
                         <span>Settings</span>
                     </a>

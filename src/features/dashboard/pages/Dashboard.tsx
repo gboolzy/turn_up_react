@@ -6,7 +6,6 @@ import { BarChartMui, BarChartMui2 } from "../components/chart/mui/BarChartMui";
 import '../../../App.css'
 import TableContent from "../components/TableContent.tsx";
 import {NavBar, NavBarBg} from "../components/navBar/NavBar.tsx";
-// import RenderBarChart from "../components/chart/reChart/BarChart";
 
 
 
