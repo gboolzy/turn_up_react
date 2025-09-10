@@ -1,5 +1,5 @@
-import type { FC } from 'react'
-import { Link } from 'react-router-dom';
+import { useState,useEffect, type FC } from 'react'
+import { Link, useLocation } from 'react-router-dom';
 
 interface navBarProps {
     active: boolean;
@@ -7,6 +7,20 @@ interface navBarProps {
 
 }
 const NavBar: FC<navBarProps> = ({ active, toggleActive }) => {
+    const [activeNav, setActiveNav] = useState<string>("active");
+    const location = useLocation();
+    console.log(location);
+ 
+    useEffect(()=>{
+        const currentPage = location.pathname.split("/").filter(Boolean).pop() || "dashboard";
+         setActiveNav(currentPage);
+    },[location]
+    
+    )
+   
+    
+
+
     return (
         <>
             <div onClick={toggleActive} className={`${active ? "block" : "hidden"}  fixed h-[100vh] w-[100vw] top-0 left-0 bg-[rgba(0,0,0,0.2)] z-[8888]`}>
@@ -21,16 +35,16 @@ const NavBar: FC<navBarProps> = ({ active, toggleActive }) => {
                         <span>NovaBoard</span>
                     </p>
                     <nav className="flex flex-col gap-1 text-[#94a3b8]">
-                        <Link to="/dashboard" className="flex bg-gradient-to-r from-indigo-500/15 to-cyan-400/12 text-[#fff] border border-[rgba(255,255,255,0.08)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center">
+                        <Link to="/dashboard" className={`flex ${activeNav == "dashboard" ? "bg-gradient-to-r from-indigo-500/15 to-cyan-400/12 text-[#fff] border border-[rgba(255,255,255,0.08)]" : ""}   rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5`}>
                             <i className="bx bx-home-alt-2"></i>
                             <span>Overview</span>
                         </Link>
-                        <Link to="/profile" className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]"  >
+                        <Link to="/profile" className={`flex ${activeNav == "profile" ? "bg-gradient-to-r from-indigo-500/15 to-cyan-400/12 text-[#fff] border border-[rgba(255,255,255,0.08)]" : ""} border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]`}  >
                             <i className="bx bx-user-circle"></i>
                             <span>My Profile</span>
                         </Link>
 
-                        <Link to="/layout" className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]"  >
+                        <Link to="/layout" className={`flex ${activeNav == "layout" ? "bg-gradient-to-r from-indigo-500/15 to-cyan-400/12 text-[#fff] border border-[rgba(255,255,255,0.08)]" : ""} border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]`}  >
                             <i className="bx bx-user-circle"></i>
                             <span>CSS Layout</span>
                         </Link>
