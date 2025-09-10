@@ -13,8 +13,8 @@ interface FormValues {
 }
 const Login = () => {
     const navigate = useNavigate();
-    const { mutate: login, error } = useLogin();
-
+    const { mutate: error } = useLogin();
+// const { mutate: login, error } = useLogin();
     const {
         register,
         handleSubmit,
@@ -22,18 +22,20 @@ const Login = () => {
     } = useForm<FormValues>();
 
     const onSubmit = (data: FormValues) => {
+        console.log(data)
+        navigate("/dashboard");
 
-        login(
-            { email: data.email, password: data.password }, // ✅ fixed password field
-            {
-                onSuccess: () => {
-                    navigate("/dashboard"); // ✅ navigate only after successful login
-                },
-                onError: (err) => {
-                    console.error("Login failed:", err.message);
-                },
-            },
-        );
+        // login(
+        //     { email: data.email, password: data.password }, // ✅ fixed password field
+        //     {
+        //         onSuccess: () => {
+        //             navigate("/dashboard"); // ✅ navigate only after successful login
+        //         },
+        //         onError: (err) => {
+        //             console.error("Login failed:", err.message);
+        //         },
+        //     },
+        // );
     };
 
     return (

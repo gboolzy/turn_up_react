@@ -5,7 +5,7 @@ import DashboardCard from "../components/card/DashboardCard"
 import { BarChartMui, BarChartMui2 } from "../components/chart/mui/BarChartMui";
 import '../../../App.css'
 import TableContent from "../components/TableContent.tsx";
-import {NavBar, NavBarBg} from "../components/navBar/NavBar.tsx";
+import {NavBar} from "../../navBar/NavBar.tsx";
 
 
 
@@ -15,7 +15,7 @@ const Dashboard = () => {
     const toggleActive = () => setActive(!active);
     return (
         <>
-        <NavBarBg active={active} toggleActive={toggleActive}/>
+
             
             <div className="h-[auto] min-h-[100vh] app-backgroung-grad px-[15px] pt-[10px] pb-[10vh]">
 
