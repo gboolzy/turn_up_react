@@ -14,9 +14,7 @@ const Dashboard = () => {
     const [active, setActive] = useState(false);
     const toggleActive = () => setActive(!active);
     return (
-        <>
-
-            
+        <>  
             <div className="h-[auto] min-h-[100vh] app-backgroung-grad px-[15px] pt-[10px] pb-[10vh]">
 
                 <NavBar active={active} toggleActive={toggleActive}/>
@@ -36,7 +34,7 @@ const Dashboard = () => {
                         </button>
 
                         <div className="flex items-center gap-2 border border-[rgba(255,255,255,0.08)] p-[8px] rounded-[10px]">
-                            <img src="/user1.svg" width="24" height="24" alt="logo" />
+                            <img src="user1.svg" width="24" height="24" alt="logo" />
                             <span>Gbolahan</span>
                             <i className="bx bx-chevron-down"></i>
                         </div>
@@ -72,13 +70,12 @@ const Dashboard = () => {
                     <CardBg>
                         <div className="h-[30px] text-[12px] flex justify-between text-[#e2e8f0]">
                             <p className="text-[#e5e7eb] text-[16px] font-bold">Recent Customer</p>
-                            <button className=" rounded-[30px] flex justify-center gap-1 items-center text-[#e2e8f0] app-backgroung-grad py-[6px] px-[10px] border border-[rgba(255,255,255,.08)]">
+                            <button className="rounded-[30px] flex justify-center gap-1 items-center text-[#e2e8f0] app-backgroung-grad py-[6px] px-[10px] border border-[rgba(255,255,255,.08)]">
                                 <i className="bx bx-exit"></i> Logout
                             </button>
                         </div>
                         <div>
-                            <table className="w-[100%] min-w-[700px] text-[#e5e7eb] mt-3 border-collapse text-left" >
-
+                            <table className="w-[100%] min-w-[700px] text-[#e5e7eb] mt-3 border-collapse text-left">
                                 <thead className=" bg-[#0b1220] text-[#cbd5e1] border border-[rgba(255,255,255,0.08)] ">
                                     <tr className="sticky">
                                         <th className="p-[12px]">Customer</th>

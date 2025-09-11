@@ -35,7 +35,7 @@ const TableContent = () => {
     return (
         <>
             {users?.map((user: any) => (
-                <tr className="border border-[rgba(255,255,255,.08)]">
+                <tr className="border border-[rgba(255,255,255,.08)] ">
                     <td className="flex items-center gap-3 p-[12px] ">
                         <div><img src={user.avatar} alt={`${user.first_name} ${user.last_name}`} className="w-[50px] h-[50px] rounded-[50px]" /></div>
                         <div>

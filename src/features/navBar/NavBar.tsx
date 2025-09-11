@@ -48,7 +48,7 @@ const NavBar: FC<navBarProps> = ({ active, toggleActive }) => {
                             <i className="bx bx-user-circle"></i>
                             <span>CSS Layout</span>
                         </Link>
-                        <a className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]" >
+                        {/* <a className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]" >
                             <i className="bx bx-bar-chart-alt-2"></i>
                             <span>Analytics</span>
                         </a>
@@ -59,7 +59,7 @@ const NavBar: FC<navBarProps> = ({ active, toggleActive }) => {
                         <a className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]">
                             <i className="bx bx-cog"></i>
                             <span>Settings</span>
-                        </a>
+                        </a> */}
                     </nav>
                     <Link to="/" className="border border-[rgba(255,255,255,0.08)] hover:border-2 transition-all duration-200 ease-in-out  hover:border-[rgba(255,255,255,0.1)]  text-[#94a3b8] text-[12px] rounded-[12px] cursor-pointer py-[8px]">
                         <button className='flex items-center justify-center gap-2 w-[100%] cursor-pointer'>

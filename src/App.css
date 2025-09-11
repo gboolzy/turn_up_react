@@ -5,6 +5,29 @@
         rgba(34, 211, 238, .15), transparent 40%), #0f172a;
 }
 
+.skill-set-slider > span{
+  position: relative;
+  display: inline-block;
+  height: 43px;
+  overflow: hidden;
+  vertical-align: bottom;
+  text-align: left;
+  padding-left: 4px;
+}
+
+.skill-set-slider > span > span{
+  display: block;
+  animation: animateWords 10s infinite ease;
+ 
+}
+@keyframes animateWords {
+  20%{transform: translateY(-100%);}
+  40%{transform: translateY(-200%);}
+  60%{transform: translateY(-300%);}
+  80%{transform: translateY(-400%);}
+  100%{transform: translateY(-500%);} 
+}
+
 .card-background-grad{
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }

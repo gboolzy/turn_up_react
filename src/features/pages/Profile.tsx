@@ -1,6 +1,7 @@
 import { NavBar } from "../navBar/NavBar";
 import { useState } from "react";
 import ProfileSkillCard from "./components/ProfileSkillCard";
+import '../../App.css'
 
 export default function Profile() {
   const [active, setActive] = useState(false);
@@ -16,7 +17,7 @@ export default function Profile() {
           </button>
         </div>
         <h3 className="text-[#fff] text-[30px] font-extrabold pt-[8vh]">Giwa Gbolahan Moshood</h3>
-        <p className="text-[#cbd5e1] text-[14px] w-[55vw] min-w-[400px] ml-auto mr-auto mt-2">
+        <p className="text-[#cbd5e1] text-[14px] w-[55vw] min-w-[300px] ml-auto mr-auto mt-2">
           Creative and detail-oriented React.js Developer with over 7 years of software
           development experience and 4+ years focused on building dynamic,
           responsive web applications using React.js.
@@ -31,7 +32,16 @@ export default function Profile() {
                      rounded-[200px] shadow-[0_10px_30px_rgba(2,6,23,0.5)]">
           {/* <img src="my_pics.jpg" alt="My Image" className="rounded-[200px] w-[100%] h-[100%]" /> */}
         </div>
-        <h3 className="text-[#fff] text-[30px] font-bold mt-[6vh] font-roboto ">Skills</h3>
+        <h3 className="text-[#fff] text-[30px] font-bold mt-[6vh] font-roboto skill-set-slider">Skills</h3>
+        {/* <h3 className="text-[#fff] text-[30px] font-bold mt-[6vh] font-roboto skill-set-slider">I'm a
+          <span>
+            <span> Coder</span>
+            <span>Developer</span>
+            <span>Programmer</span>
+            <span>Software Engineer</span>
+            <span> Coder</span>
+          </span>
+        </h3> */}
 
 
         <section className="mt-5 px-[10vw] pb-[10vh]  md:flex md:justify-center gap-6">
