@@ -9,10 +9,10 @@ import About from "./features/pages/About.tsx";
 import Layout from "./features/pages/Layout.tsx";
 import CardGame from "./features/pages/games/CardGame.tsx";
 import SnakeGame from "./features/pages/practice/SnakeGame.tsx";
-import NumberGuessingGame from "./features/pages/practice/NumberGessingGame.tsx";
-import HangmanGame from "./features/pages/practice/HangManGame.tsx";
+// import NumberGuessingGame from "./features/pages/practice/NumberGessingGame.tsx";
+// import HangmanGame from "./features/pages/practice/HangManGame.tsx";
 import Hangman from "./features/pages/games/Hangman.tsx";
-import WhackAMole from "./features/pages/practice/WckAMoleGame.tsx";
+// import WhackAMole from "./features/pages/practice/WckAMoleGame.tsx";
 function App() {
 
 
