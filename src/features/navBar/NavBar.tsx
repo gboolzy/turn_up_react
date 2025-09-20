@@ -13,7 +13,6 @@ const NavBar: FC<navBarProps> = ({ active, toggleActive }) => {
     const location = useLocation();
     // console.log(location);
 
-
     const displaySubNavFunc = () => setDisplaySubNav(!displaySubNav);
 
     useEffect(() => {
@@ -23,8 +22,6 @@ const NavBar: FC<navBarProps> = ({ active, toggleActive }) => {
     }, [location]
 
     )
-
-
 
 
     return (
