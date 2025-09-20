@@ -1,4 +1,4 @@
-import { useState,useEffect, type FC } from 'react'
+import { useState, useEffect, type FC } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 
 interface navBarProps {
@@ -6,19 +6,25 @@ interface navBarProps {
     toggleActive: () => void;
 
 }
+
 const NavBar: FC<navBarProps> = ({ active, toggleActive }) => {
     const [activeNav, setActiveNav] = useState<string>("active");
+    const [displaySubNav, setDisplaySubNav] = useState<boolean>(false);
     const location = useLocation();
-    console.log(location);
- 
-    useEffect(()=>{
+    // console.log(location);
+
+
+    const displaySubNavFunc = () => setDisplaySubNav(!displaySubNav);
+
+    useEffect(() => {
         const currentPage = location.pathname.split("/").filter(Boolean).pop() || "dashboard";
-         setActiveNav(currentPage);
-    },[location]
-    
+        // console.log(currentPage);
+        setActiveNav(currentPage);
+    }, [location]
+
     )
-   
-    
+
+
 
 
     return (
@@ -48,6 +54,33 @@ const NavBar: FC<navBarProps> = ({ active, toggleActive }) => {
                             <i className="bx bx-user-circle"></i>
                             <span>CSS Layout</span>
                         </Link>
+                        {/* <Link to="/game" className={`flex ${activeNav == "game" ? "bg-gradient-to-r from-indigo-500/15 to-cyan-400/12 text-[#fff] border border-[rgba(255,255,255,0.08)]" : ""} border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]`}  >
+                            <i className="bx bx-user-circle"></i>
+                            <span>Games</span>
+                        </Link> */}
+                        <div>
+                            <div onClick={displaySubNavFunc} className={`flex ${activeNav == "games" ? "bg-gradient-to-r from-indigo-500/15 to-cyan-400/12 text-[#fff] border border-[rgba(255,255,255,0.08)]" : ""} border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center justify-between hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]`}  >
+                                <div className='flex gap-3 items-center'>
+                                    <i className="bx bx-joystick-button"></i>
+                                    <span>Game</span>
+                                </div>
+                                <i className={`${displaySubNav ? 'bx bx-caret-down' : 'bx bx-caret-right'}`}></i>
+                            </div>
+                            <ul className={`ml-10 mt-2 text-[14px] ${displaySubNav ? 'transition-all duration-500 translate-y-0 opacity-100' : 'transition-all duration-500 translate-y-[-25px] opacity-0'} `}>
+                                <li>
+                                    <Link to="/games/card-game" className={`flex ${activeNav == "card-game" ? "bg-gradient-to-r from-indigo-500/15 to-cyan-400/12 text-[#fff] border border-[rgba(255,255,255,0.08)]" : ""} border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff] mb-2`}  >
+                                        Card Game
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/games/hangman" className={`flex ${activeNav == "hangman" ? "bg-gradient-to-r from-indigo-500/15 to-cyan-400/12 text-[#fff] border border-[rgba(255,255,255,0.08)]" : ""} border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff] mb-2`}  >
+                                        Hangman
+                                    </Link>
+                                </li>
+                                <li></li>
+                            </ul>
+                        </div>
+
                         {/* <a className="flex border border-[rgba(255,255,255,0.01)] rounded-[12px] w-[231px] py-[10px] px-[12px] gap-3 items-center hover:border  hover:border-[rgba(255,255,255,0.08)]  hover:bg-gradient-to-r from-indigo-500/8 to-cyan-400/5 cursor-pointer hover:text-[#fff]" >
                             <i className="bx bx-bar-chart-alt-2"></i>
                             <span>Analytics</span>

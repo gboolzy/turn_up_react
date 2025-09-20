@@ -8,7 +8,6 @@ export default {
         extend: {
             fontFamily: {
                 inter: ["Inter", "system-ui", "Segoe UI", "Roboto", "Arial", "sans-serif"],
-                roboto: ["Roboto Condensed", "sans-serif"], 
             },
         },
     },

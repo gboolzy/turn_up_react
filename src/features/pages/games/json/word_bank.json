@@ -1,0 +1,898 @@
+[
+  {
+    "word": "Nigeria",
+    "hint": [
+      "It's a country",
+      "It's in Africa"
+    ]
+  },
+  {
+    "word": "Pineapple",
+    "hint": [
+      "It's a fruit",
+      "It's sweet"
+    ]
+  },
+  {
+    "word": "Elephant",
+    "hint": [
+      "It's an animal",
+      "A large animal"
+    ]
+  },
+  {
+    "word": "Amazon",
+    "hint": [
+      "It's a company",
+      "Also a big river"
+    ]
+  },
+  {
+    "word": "Football",
+    "hint": [
+      "It's a sport",
+      "Played worldwide"
+    ]
+  },
+  {
+    "word": "Oxygen",
+    "hint": [
+      "It's a gas",
+      "Needed to breathe"
+    ]
+  },
+  {
+    "word": "Guitar",
+    "hint": [
+      "It's an instrument",
+      "It has strings"
+    ]
+  },
+  {
+    "word": "Diamond",
+    "hint": [
+      "It's a stone",
+      "It's very valuable"
+    ]
+  },
+  {
+    "word": "Venus",
+    "hint": [
+      "It's a planet",
+      "Close to Earth"
+    ]
+  },
+  {
+    "word": "Twitter",
+    "hint": [
+      "It's an app",
+      "Used for short posts"
+    ]
+  },
+  {
+    "word": "Eagle",
+    "hint": [
+      "It's a bird",
+      "It flies high"
+    ]
+  },
+  {
+    "word": "Coffee",
+    "hint": [
+      "It's a drink",
+      "Made from beans"
+    ]
+  },
+  {
+    "word": "Python",
+    "hint": [
+      "It's a language",
+      "Also an animal"
+    ]
+  },
+  {
+    "word": "Chess",
+    "hint": [
+      "It's a game",
+      "Played on a board"
+    ]
+  },
+  {
+    "word": "Basketball",
+    "hint": [
+      "It's a sport",
+      "Uses a ball"
+    ]
+  },
+  {
+    "word": "River",
+    "hint": [
+      "It's water",
+      "It flows"
+    ]
+  },
+  {
+    "word": "Laptop",
+    "hint": [
+      "It's a computer",
+      "It's portable"
+    ]
+  },
+  {
+    "word": "Pizza",
+    "hint": [
+      "It's food",
+      "It's round"
+    ]
+  },
+  {
+    "word": "Gold",
+    "hint": [
+      "It's a metal",
+      "It's valuable"
+    ]
+  },
+  {
+    "word": "Apple",
+    "hint": [
+      "It's a fruit",
+      "Also a company"
+    ]
+  },
+  {
+    "word": "Doctor",
+    "hint": [
+      "It's a profession",
+      "Helps people"
+    ]
+  },
+  {
+    "word": "Moon",
+    "hint": [
+      "It's in space",
+      "It orbits Earth"
+    ]
+  },
+  {
+    "word": "Train",
+    "hint": [
+      "It's transport",
+      "Runs on tracks"
+    ]
+  },
+  {
+    "word": "Shark",
+    "hint": [
+      "It's an animal",
+      "Lives in water"
+    ]
+  },
+  {
+    "word": "Carrot",
+    "hint": [
+      "It's a vegetable",
+      "It's orange"
+    ]
+  },
+  {
+    "word": "Google",
+    "hint": [
+      "It's a company",
+      "It's a search engine"
+    ]
+  },
+  {
+    "word": "Lion",
+    "hint": [
+      "It's an animal",
+      "It's strong"
+    ]
+  },
+  {
+    "word": "Hospital",
+    "hint": [
+      "It's a place",
+      "For treatment"
+    ]
+  },
+  {
+    "word": "Rain",
+    "hint": [
+      "It's weather",
+      "It falls"
+    ]
+  },
+  {
+    "word": "Teacher",
+    "hint": [
+      "It's a job",
+      "Teaches students"
+    ]
+  },
+  {
+    "word": "Cat",
+    "hint": [
+      "It's an animal",
+      "It's small"
+    ]
+  },
+  {
+    "word": "Dog",
+    "hint": [
+      "It's an animal",
+      "It's friendly"
+    ]
+  },
+  {
+    "word": "Horse",
+    "hint": [
+      "It's an animal",
+      "It runs fast"
+    ]
+  },
+  {
+    "word": "Banana",
+    "hint": [
+      "It's a fruit",
+      "It's yellow"
+    ]
+  },
+  {
+    "word": "Mango",
+    "hint": [
+      "It's a fruit",
+      "It's tropical"
+    ]
+  },
+  {
+    "word": "Strawberry",
+    "hint": [
+      "It's a fruit",
+      "It's red"
+    ]
+  },
+  {
+    "word": "Blueberry",
+    "hint": [
+      "It's a fruit",
+      "It's small"
+    ]
+  },
+  {
+    "word": "Orange",
+    "hint": [
+      "It's a fruit",
+      "It's round"
+    ]
+  },
+  {
+    "word": "Coconut",
+    "hint": [
+      "It's a fruit",
+      "It's hard outside"
+    ]
+  },
+  {
+    "word": "Tomato",
+    "hint": [
+      "It's a vegetable",
+      "It's red"
+    ]
+  },
+  {
+    "word": "Potato",
+    "hint": [
+      "It's a vegetable",
+      "It's underground"
+    ]
+  },
+  {
+    "word": "Onion",
+    "hint": [
+      "It's a vegetable",
+      "It makes you cry"
+    ]
+  },
+  {
+    "word": "Cabbage",
+    "hint": [
+      "It's a vegetable",
+      "It's leafy"
+    ]
+  },
+  {
+    "word": "Broccoli",
+    "hint": [
+      "It's a vegetable",
+      "It's green"
+    ]
+  },
+  {
+    "word": "Airplane",
+    "hint": [
+      "It's transport",
+      "It flies"
+    ]
+  },
+  {
+    "word": "Car",
+    "hint": [
+      "It's transport",
+      "It has wheels"
+    ]
+  },
+  {
+    "word": "Bus",
+    "hint": [
+      "It's transport",
+      "It carries many people"
+    ]
+  },
+  {
+    "word": "Bicycle",
+    "hint": [
+      "It's transport",
+      "It has two wheels"
+    ]
+  },
+  {
+    "word": "Boat",
+    "hint": [
+      "It's transport",
+      "It floats"
+    ]
+  },
+  {
+    "word": "Rocket",
+    "hint": [
+      "It's transport",
+      "It goes to space"
+    ]
+  },
+  {
+    "word": "Mars",
+    "hint": [
+      "It's a planet",
+      "It's red"
+    ]
+  },
+  {
+    "word": "Jupiter",
+    "hint": [
+      "It's a planet",
+      "It's large"
+    ]
+  },
+  {
+    "word": "Saturn",
+    "hint": [
+      "It's a planet",
+      "It has rings"
+    ]
+  },
+  {
+    "word": "Neptune",
+    "hint": [
+      "It's a planet",
+      "It's blue"
+    ]
+  },
+  {
+    "word": "Mercury",
+    "hint": [
+      "It's a planet",
+      "Closest to Sun"
+    ]
+  },
+  {
+    "word": "Pluto",
+    "hint": [
+      "It's in space",
+      "It's small"
+    ]
+  },
+  {
+    "word": "Sun",
+    "hint": [
+      "It's in space",
+      "It's hot"
+    ]
+  },
+  {
+    "word": "Star",
+    "hint": [
+      "It's in space",
+      "It shines"
+    ]
+  },
+  {
+    "word": "Galaxy",
+    "hint": [
+      "It's in space",
+      "It's massive"
+    ]
+  },
+  {
+    "word": "Universe",
+    "hint": [
+      "It's in space",
+      "It's everything"
+    ]
+  },
+  {
+    "word": "Table",
+    "hint": [
+      "It's furniture",
+      "Used for eating"
+    ]
+  },
+  {
+    "word": "Chair",
+    "hint": [
+      "It's furniture",
+      "Used for sitting"
+    ]
+  },
+  {
+    "word": "Bed",
+    "hint": [
+      "It's furniture",
+      "Used for sleeping"
+    ]
+  },
+  {
+    "word": "Sofa",
+    "hint": [
+      "It's furniture",
+      "Used for relaxing"
+    ]
+  },
+  {
+    "word": "Door",
+    "hint": [
+      "It's furniture",
+      "You open it"
+    ]
+  },
+  {
+    "word": "Window",
+    "hint": [
+      "It's furniture",
+      "You look through it"
+    ]
+  },
+  {
+    "word": "Book",
+    "hint": [
+      "It's an object",
+      "You read it"
+    ]
+  },
+  {
+    "word": "Pen",
+    "hint": [
+      "It's an object",
+      "You write with it"
+    ]
+  },
+  {
+    "word": "Phone",
+    "hint": [
+      "It's a device",
+      "You call with it"
+    ]
+  },
+  {
+    "word": "Camera",
+    "hint": [
+      "It's a device",
+      "It takes photos"
+    ]
+  },
+  {
+    "word": "Watch",
+    "hint": [
+      "It's an object",
+      "It tells time"
+    ]
+  },
+  {
+    "word": "Clock",
+    "hint": [
+      "It's an object",
+      "It shows time"
+    ]
+  },
+  {
+    "word": "Shoes",
+    "hint": [
+      "It's clothing",
+      "You wear it"
+    ]
+  },
+  {
+    "word": "Shirt",
+    "hint": [
+      "It's clothing",
+      "You wear it"
+    ]
+  },
+  {
+    "word": "Hat",
+    "hint": [
+      "It's clothing",
+      "You wear it on head"
+    ]
+  },
+  {
+    "word": "Gloves",
+    "hint": [
+      "It's clothing",
+      "You wear on hands"
+    ]
+  },
+  {
+    "word": "Jacket",
+    "hint": [
+      "It's clothing",
+      "You wear when cold"
+    ]
+  },
+  {
+    "word": "Pants",
+    "hint": [
+      "It's clothing",
+      "You wear it"
+    ]
+  },
+  {
+    "word": "Dress",
+    "hint": [
+      "It's clothing",
+      "You wear it"
+    ]
+  },
+  {
+    "word": "Ring",
+    "hint": [
+      "It's jewelry",
+      "You wear it"
+    ]
+  },
+  {
+    "word": "Necklace",
+    "hint": [
+      "It's jewelry",
+      "You wear it"
+    ]
+  },
+  {
+    "word": "Bracelet",
+    "hint": [
+      "It's jewelry",
+      "You wear it"
+    ]
+  },
+  {
+    "word": "Ear",
+    "hint": [
+      "It's a body part",
+      "You hear with it"
+    ]
+  },
+  {
+    "word": "Eye",
+    "hint": [
+      "It's a body part",
+      "You see with it"
+    ]
+  },
+  {
+    "word": "Hand",
+    "hint": [
+      "It's a body part",
+      "You grab with it"
+    ]
+  },
+  {
+    "word": "Leg",
+    "hint": [
+      "It's a body part",
+      "You walk with it"
+    ]
+  },
+  {
+    "word": "Head",
+    "hint": [
+      "It's a body part",
+      "It's on top"
+    ]
+  },
+  {
+    "word": "Heart",
+    "hint": [
+      "It's a body part",
+      "It beats"
+    ]
+  },
+  {
+    "word": "Brain",
+    "hint": [
+      "It's a body part",
+      "It thinks"
+    ]
+  },
+  {
+    "word": "School",
+    "hint": [
+      "It's a place",
+      "For learning"
+    ]
+  },
+  {
+    "word": "Market",
+    "hint": [
+      "It's a place",
+      "For buying things"
+    ]
+  },
+  {
+    "word": "Bank",
+    "hint": [
+      "It's a place",
+      "For money"
+    ]
+  },
+  {
+    "word": "Library",
+    "hint": [
+      "It's a place",
+      "For books"
+    ]
+  },
+  {
+    "word": "Park",
+    "hint": [
+      "It's a place",
+      "For relaxation"
+    ]
+  },
+  {
+    "word": "Beach",
+    "hint": [
+      "It's a place",
+      "Has sand and water"
+    ]
+  },
+  {
+    "word": "Mountain",
+    "hint": [
+      "It's nature",
+      "It's tall"
+    ]
+  },
+  {
+    "word": "Desert",
+    "hint": [
+      "It's nature",
+      "It's dry"
+    ]
+  },
+  {
+    "word": "Forest",
+    "hint": [
+      "It's nature",
+      "Has many trees"
+    ]
+  },
+  {
+    "word": "Island",
+    "hint": [
+      "It's land",
+      "Surrounded by water"
+    ]
+  },
+  {
+    "word": "Ocean",
+    "hint": [
+      "It's water",
+      "It's big"
+    ]
+  },
+  {
+    "word": "Lake",
+    "hint": [
+      "It's water",
+      "It's smaller than ocean"
+    ]
+  },
+  {
+    "word": "River",
+    "hint": [
+      "It's water",
+      "It flows"
+    ]
+  },
+  {
+    "word": "Bridge",
+    "hint": [
+      "It's a structure",
+      "Connects places"
+    ]
+  },
+  {
+    "word": "Road",
+    "hint": [
+      "It's a structure",
+      "Cars use it"
+    ]
+  },
+  {
+    "word": "Tower",
+    "hint": [
+      "It's a structure",
+      "It's tall"
+    ]
+  },
+  {
+    "word": "Building",
+    "hint": [
+      "It's a structure",
+      "People live inside"
+    ]
+  },
+  {
+    "word": "House",
+    "hint": [
+      "It's a structure",
+      "You live inside"
+    ]
+  },
+  {
+    "word": "Castle",
+    "hint": [
+      "It's a structure",
+      "Old and big"
+    ]
+  },
+  {
+    "word": "Temple",
+    "hint": [
+      "It's a place",
+      "For worship"
+    ]
+  },
+  {
+    "word": "Church",
+    "hint": [
+      "It's a place",
+      "For prayer"
+    ]
+  },
+  {
+    "word": "Mosque",
+    "hint": [
+      "It's a place",
+      "For Muslims"
+    ]
+  },
+  {
+    "word": "Market",
+    "hint": [
+      "It's a place",
+      "You shop here"
+    ]
+  },
+  {
+    "word": "Cinema",
+    "hint": [
+      "It's a place",
+      "You watch movies"
+    ]
+  },
+  {
+    "word": "Stadium",
+    "hint": [
+      "It's a place",
+      "Sports happen here"
+    ]
+  },
+  {
+    "word": "Zoo",
+    "hint": [
+      "It's a place",
+      "Animals live here"
+    ]
+  },
+  {
+    "word": "Farm",
+    "hint": [
+      "It's a place",
+      "Grows crops"
+    ]
+  },
+  {
+    "word": "Garden",
+    "hint": [
+      "It's a place",
+      "Has flowers"
+    ]
+  },
+  {
+    "word": "Schoolbag",
+    "hint": [
+      "It's an object",
+      "Students carry it"
+    ]
+  },
+  {
+    "word": "Notebook",
+    "hint": [
+      "It's an object",
+      "You write in it"
+    ]
+  },
+  {
+    "word": "Pencil",
+    "hint": [
+      "It's an object",
+      "Used for writing"
+    ]
+  },
+  {
+    "word": "Eraser",
+    "hint": [
+      "It's an object",
+      "Used for correction"
+    ]
+  },
+  {
+    "word": "Ruler",
+    "hint": [
+      "It's an object",
+      "Used for measuring"
+    ]
+  },
+  {
+    "word": "Paper",
+    "hint": [
+      "It's an object",
+      "You write on it"
+    ]
+  },
+  {
+    "word": "Bottle",
+    "hint": [
+      "It's an object",
+      "Holds liquid"
+    ]
+  },
+  {
+    "word": "Cup",
+    "hint": [
+      "It's an object",
+      "You drink with it"
+    ]
+  },
+  {
+    "word": "Plate",
+    "hint": [
+      "It's an object",
+      "You eat with it"
+    ]
+  },
+  {
+    "word": "Spoon",
+    "hint": [
+      "It's an object",
+      "Used for eating"
+    ]
+  },
+  {
+    "word": "Fork",
+    "hint": [
+      "It's an object",
+      "Used for eating"
+    ]
+  }
+]
