@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useLogin } from "../hooks/UseAuth";
+// import { useLogin } from "../hooks/UseAuth";
 import { useForm } from "react-hook-form";
 import "../../../App.css";
 import Input from "../../../components/Input";
@@ -13,7 +13,7 @@ interface FormValues {
 }
 const Login = () => {
     const navigate = useNavigate();
-    const { mutate: error } = useLogin();
+    // const { mutate: error } = useLogin();
 // const { mutate: login, error } = useLogin();
     const {
         register,
@@ -41,7 +41,7 @@ const Login = () => {
     return (
         <>
             <AuthCard>
-               {error && <p className="text-[#e5e7eb]">{(error as any).message || "Login failed"}</p>}
+               {/* {error && <p className="text-[#e5e7eb]">{(error as any).message || "Login failed"}</p>} */}
                 <div className="flex items-center justify-center text-[#ffffff] font-bold mb-2 gap-2" >
                     <i className="text-[#6366f1] bx bxs-dashboard"></i>
                     Login

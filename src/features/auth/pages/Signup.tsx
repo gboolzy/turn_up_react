@@ -4,13 +4,35 @@ import "../../../App.css";
 import Input from "../../../components/Input";
 import AuthCard from "../components/AuthCard";
 import AuthButton from "../components/AuthButton";
+import { useSignup } from "../hooks/UseAuth";
+import { useEffect, useState } from "react";
 interface FormValues {
-    fullName: string;
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
     email: string;
     password: string;
 }
+
+type FormInitValues = {
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
+    email: string;
+    password: string;
+}
+
 const SignUp = () => {
-const navigate = useNavigate();
+    const navigate = useNavigate();
+    const { mutate: signup } = useSignup();
+    const initialFormValues: FormInitValues = {
+        firstName: "",
+        lastName: "",
+        phoneNumber: "",
+        email: "",
+        password: ""
+    };
+    const [form, setForm] = useState<FormInitValues>(initialFormValues);
 
 
     const {
@@ -19,10 +41,33 @@ const navigate = useNavigate();
         formState: { errors },
     } = useForm<FormValues>();
 
-    const onSubmit = (data: FormValues) => { 
-        console.log("Form Data:", data);
-        navigate("/dashboard");
+    const onSubmit = (data: FormValues) => {
+        // console.log("Form Data:", data);
+        // navigate("/dashboard");
+
+        signup(
+            {
+                firstName: data.firstName,
+                lastName: data.lastName,
+                phoneNumber: data.phoneNumber,
+                email: data.email,
+                password: data.password
+            }, // ✅ fixed password field
+            {
+                onSuccess: (data) => {
+                    console.log(data);
+                    navigate("/login"); // ✅ navigate only after successful login
+                },
+                onError: (err) => {
+                    console.error("Login failed:", err.message);
+                },
+            },
+        );
     };
+
+    useEffect(() => {
+        setForm(initialFormValues);
+    }, []);
     return (
         <>
             <AuthCard>
@@ -33,14 +78,33 @@ const navigate = useNavigate();
                 <h2 className="text-[#e5e7eb] text-[1.5em] font-bold">Create account</h2>
                 <p className="text-[#94a3b8] mt-2">Start your journey with us</p>
                 <form onSubmit={handleSubmit(onSubmit)} >
-                    <Input icon="bx bx-user" id="fullName" name="fullName" placeholder="Full Name" type="text"
-                        register={register("fullName", {
-                            required: "Full name is required",
+                    <Input icon="bx bx-user" id="firstName" value={form.firstName} name="firstName" placeholder="First Name" type="text"
+                        onChange={e => setForm({ ...form, firstName: e.target.value })}
+                        register={register("firstName", {
+                            required: "First name is required",
+                            minLength: { value: 3, message: "At least 3 characters" },
+                        })}
+                        error={errors.firstName?.message}
+                    />
+                    <Input icon="bx bx-user" id="lastName" value={form.lastName} name="lastName" placeholder="Last Name" type="text"
+                        onChange={e => setForm({ ...form, lastName: e.target.value })}
+                        register={register("lastName", {
+                            required: "Last name is required",
+                            minLength: { value: 3, message: "At least 3 characters" },
+                        })}
+                        error={errors.lastName?.message}
+                    />
+
+                    <Input icon="bx bx-phone" id="phoneNumber" value={form.phoneNumber} name="phoneNumber" placeholder="Phone Name" type="text"
+                        onChange={e => setForm({ ...form, phoneNumber: e.target.value })}
+                        register={register("phoneNumber", {
+                            required: "Last name is required",
                             minLength: { value: 6, message: "At least 6 characters" },
                         })}
-                        error={errors.fullName?.message}
+                        error={errors.phoneNumber?.message}
                     />
-                    <Input icon="bx bx-envelope" id="email" name="email" placeholder="Email" type="email"
+                    <Input icon="bx bx-envelope" id="email" value={form.email} name="email" placeholder="Email" type="email"
+                        onChange={e => setForm({ ...form, email: e.target.value })}
                         register={register("email", {
                             required: "Email is required",
                             pattern: {
@@ -50,7 +114,8 @@ const navigate = useNavigate();
                         })}
                         error={errors.email?.message}
                     />
-                    <Input icon="bx bx-lock-alt" id="password" name="password" placeholder="Password" type="password"
+                    <Input icon="bx bx-lock-alt" id="password" value={form.password} name="password" placeholder="Password" type="password"
+                        onChange={e => setForm({ ...form, password: e.target.value })}
                         register={register("password", {
                             required: "Password is required",
                             minLength: { value: 6, message: "At least 6 characters" },
@@ -58,6 +123,7 @@ const navigate = useNavigate();
                         error={errors.password?.message}
                     />
                     <AuthButton buttonText="Submit" />
+                    
                     <p className="mt-3 text-[#94a3b8] text-[12px] ">Already have an account? <Link to="/" className="underline text-[#6366f1]">Login</Link></p>
                 </form>
             </AuthCard>
