@@ -1,10 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
-// import { useLogin } from "../hooks/UseAuth";
+import { useLogin } from "../hooks/UseAuth";
 import { useForm } from "react-hook-form";
 import "../../../App.css";
 import Input from "../../../components/Input";
 import AuthCard from "../components/AuthCard";
 import AuthButton from "../components/AuthButton";
+import { useState } from "react";
+import axios from "axios";
 
 
 interface FormValues {
@@ -13,8 +15,8 @@ interface FormValues {
 }
 const Login = () => {
     const navigate = useNavigate();
-    // const { mutate: error } = useLogin();
-// const { mutate: login, error } = useLogin();
+    const { mutate: login } = useLogin();
+    const [errorMsg, setErrorMsg] = useState<string>("");
     const {
         register,
         handleSubmit,
@@ -22,27 +24,42 @@ const Login = () => {
     } = useForm<FormValues>();
 
     const onSubmit = (data: FormValues) => {
-        console.log(data)
-        navigate("/dashboard");
+        // 
+        
+        login(
+            { email: data.email, password: data.password }, // ✅ fixed password field
+            {
+                onSuccess: (data) => {
+                    console.log(data.data.token);
+                    localStorage.setItem("accessToken", data.data.token);
+                    navigate("/dashboard"); // ✅ navigate only after successful login
+                    
+                },
+                onError: (err) => {
+                    if (axios.isAxiosError(err) && err.response) {
+                        // full response object
+                        console.error("Error response:", err.response);
+                        // just the data payload
+                        console.error("Error data:", err.response.data);
+                        setErrorMsg(err.response.data.message);
 
-        // login(
-        //     { email: data.email, password: data.password }, // ✅ fixed password field
-        //     {
-        //         onSuccess: () => {
-        //             navigate("/dashboard"); // ✅ navigate only after successful login
-        //         },
-        //         onError: (err) => {
-        //             console.error("Login failed:", err.message);
-        //         },
-        //     },
-        // );
+
+                    } else {
+                        console.error("Unexpected error:", err);
+                        setErrorMsg(err.message);
+
+                    }
+                    // console.error("Login failed:", err.message);
+                },
+            },
+        );
     };
 
     return (
         <>
             <AuthCard>
-               {/* {error && <p className="text-[#e5e7eb]">{(error as any).message || "Login failed"}</p>} */}
-                <div className="flex items-center justify-center text-[#ffffff] font-bold mb-2 gap-2" >
+                {errorMsg && (<p className="text-red-500 font-light">{String(errorMsg)}</p>)}
+                <div className="flex items-center justify-center text-[#ffffff] font-bold mb-2 mt-3 gap-2" >
                     <i className="text-[#6366f1] bx bxs-dashboard"></i>
                     Login
                 </div>

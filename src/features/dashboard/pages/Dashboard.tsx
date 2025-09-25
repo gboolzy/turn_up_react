@@ -13,6 +13,7 @@ const Dashboard = () => {
 
     const [active, setActive] = useState(false);
     const toggleActive = () => setActive(!active);
+  
     return (
         <>  
             <div className="h-[auto] min-h-[100vh] app-backgroung-grad px-[15px] pt-[10px] pb-[10vh]">
@@ -79,9 +80,8 @@ const Dashboard = () => {
                                 <thead className=" bg-[#0b1220] text-[#cbd5e1] border border-[rgba(255,255,255,0.08)] ">
                                     <tr className="sticky">
                                         <th className="p-[12px]">Customer</th>
-                                        <th className="p-[12px]">Plan</th>
-                                        <th className="p-[12px]">MRR</th>
-                                        <th className="p-[12px]">Status</th>
+                                        <th className="p-[12px]">Email</th>
+                                        <th className="p-[12px]">Phone no</th>
                                         <th className="p-[12px]">Joined</th>
                                         <th className="p-[12px]">Actions</th>
                                     </tr>

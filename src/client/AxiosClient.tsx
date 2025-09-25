@@ -1,12 +1,14 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "https://api.sagfieldsclean.co.uk",
+  baseURL: "http://localhost:7000",
 });
+
 
 // Add a token if needed
 axiosClient.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem("accessToken");
+  console.log("token", token);
   if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });

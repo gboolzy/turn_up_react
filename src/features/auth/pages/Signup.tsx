@@ -6,6 +6,7 @@ import AuthCard from "../components/AuthCard";
 import AuthButton from "../components/AuthButton";
 import { useSignup } from "../hooks/UseAuth";
 import { useEffect, useState } from "react";
+import axios from "axios";
 interface FormValues {
     firstName: string;
     lastName: string;
@@ -33,6 +34,7 @@ const SignUp = () => {
         password: ""
     };
     const [form, setForm] = useState<FormInitValues>(initialFormValues);
+    const [errorMsg, setErrorMsg] = useState<string>("");
 
 
     const {
@@ -56,10 +58,22 @@ const SignUp = () => {
             {
                 onSuccess: (data) => {
                     console.log(data);
-                    navigate("/login"); // ✅ navigate only after successful login
+                    navigate("/"); // ✅ navigate only after successful login
                 },
                 onError: (err) => {
-                    console.error("Login failed:", err.message);
+                    if (axios.isAxiosError(err) && err.response) {
+                        // full response object
+                        console.error("Error response:", err.response);
+                        // just the data payload
+                        console.error("Error data:", err.response.data);
+                        setErrorMsg(err.response.data.message);
+                      
+
+                    } else {
+                        console.error("Unexpected error:", err);
+                        setErrorMsg(err.message);
+                        
+                    }
                 },
             },
         );
@@ -71,7 +85,8 @@ const SignUp = () => {
     return (
         <>
             <AuthCard>
-                <div className="flex items-center justify-center text-[#ffffff] font-bold mb-2 gap-2" >
+               <p className="text-red-500 font-light"> {String(errorMsg) }</p>
+                <div className="flex items-center justify-center text-[#ffffff] font-bold mb-2 mt-3 gap-2" >
                     <i className="text-[#6366f1] bx bxs-dashboard"></i>
                     Signup
                 </div>
@@ -123,7 +138,7 @@ const SignUp = () => {
                         error={errors.password?.message}
                     />
                     <AuthButton buttonText="Submit" />
-                    
+
                     <p className="mt-3 text-[#94a3b8] text-[12px] ">Already have an account? <Link to="/" className="underline text-[#6366f1]">Login</Link></p>
                 </form>
             </AuthCard>
